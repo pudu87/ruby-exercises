@@ -1,11 +1,10 @@
 dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 
 def substrings(string, dictionary)
-  result = {}
+  result = Hash.new(0)
   string.downcase!
   dictionary.each do |word|
     ind = 0
-    result[word] = 0
     while string[ind..-1].index(word) != nil do
       ind += string[ind..-1].index(word) + 1
       result[word] += 1
